@@ -1,0 +1,11 @@
+{
+  "name": "pathfinder_resource_base",
+  "version": "0.0.1",
+  "description": "A Database Api for Pathfinder Resources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erik \"Obyoxar\" Mayrhofer",
+  "license": "GPL-3.0"
+}
