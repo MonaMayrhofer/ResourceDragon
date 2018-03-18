@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Erik \"Obyoxar\" Mayrhofer",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
 }
