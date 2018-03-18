@@ -2,9 +2,8 @@
   "name": "pathfinder_resource_base",
   "version": "0.0.1",
   "description": "A Database Api for Pathfinder Resources",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "DEBUG=api:server node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Erik \"Obyoxar\" Mayrhofer",
@@ -12,12 +11,21 @@
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
+    "editorconfig": "^0.15.0",
     "jade": "^1.11.0",
+    "morgan": "^1.9.0",
     "mysql": "^2.15.0",
+    "mysql2": "^1.5.2",
+    "passport": "^0.4.0",
     "passport-headerapikey": "^1.0.3",
-    "serve-favicon": "^2.4.5"
+    "passport-localapikey": "0.0.3",
+    "sequelize": "^4.37.1",
+    "serve-favicon": "^2.4.5",
+    "body-parser": "~1.18.2",
+    "debug": "~2.6.9"
   },
   "devDependencies": {
+    "eslint": "^4.19.0",
     "eslint-config-google": "^0.9.1"
   }
 }

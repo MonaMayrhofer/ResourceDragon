@@ -17,17 +17,7 @@ passport.use(new HeaderApiKey(
     });
   }
 ));
-/*
-passport.serializeUser((user, cb) => {
-  cb(null, user.id); // TODO Do this better
-});
 
-passport.deserializeUser((id, cb) => {
-  User.findByPrimary(id).then((user) => {
-    cb(user);
-  });
-});
-*/
 module.exports = {
   passport: passport,
   auth: () => passport.authenticate('headerapikey',
