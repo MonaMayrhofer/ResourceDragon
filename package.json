@@ -8,6 +8,7 @@
   },
   "author": "Erik \"Obyoxar\" Mayrhofer",
   "license": "GPL-3.0",
+  "repository": "https://github.com/Obyoxar/ResourceDragon",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
