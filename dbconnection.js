@@ -16,6 +16,7 @@ function connect() {
   sequelize.authenticate()
   .then(() => {
     debug('Connection has been established!');
+    sequelize.sync();
   }).catch((err) => {
     debug('Connection failed: '+err);
     debug('Trying to reconnect in 5s');
