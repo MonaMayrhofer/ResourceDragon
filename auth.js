@@ -1,7 +1,7 @@
 const passport = require('passport');
 const HeaderApiKey = require('passport-headerapikey').HeaderAPIKeyStrategy;
 const User = require('./models/User');
-const debug = require('debug')('auth');
+const debug = require('debug')('prb:auth');
 
 passport.use(new HeaderApiKey(
   {header: 'Authorization', prefix: 'Api-Key '},

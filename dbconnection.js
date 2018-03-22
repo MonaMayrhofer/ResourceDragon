@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const debug = require('debug')('dbconnection');
+const debug = require('debug')('prb:dbconnection');
 
 
 const sequelize = new Sequelize('apitest',
