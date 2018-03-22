@@ -3,27 +3,24 @@
   "version": "0.0.1",
   "description": "A Database Api for Pathfinder Resources",
   "scripts": {
-    "start": "DEBUG=api:server node ./bin/www",
+    "start": "DEBUG=* node ./bin/www",
+    "lint": "eslint ./**/*.js",
+    "devel": "DEBUG=* PRB_DATABASE_USER=root PRB_DATABASE_PASSPHRASE=changeme PRB_DATABASE_HOST=localhost node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Erik \"Obyoxar\" Mayrhofer",
   "license": "GPL-3.0",
   "repository": "https://github.com/Obyoxar/ResourceDragon",
   "dependencies": {
+    "body-parser": "~1.18.2",
     "cookie-parser": "^1.4.3",
-    "cors": "^2.8.4",
-    "editorconfig": "^0.15.0",
-    "jade": "^1.11.0",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
     "morgan": "^1.9.0",
-    "mysql": "^2.15.0",
-    "mysql2": "^1.5.2",
     "passport": "^0.4.0",
     "passport-headerapikey": "^1.0.3",
-    "passport-localapikey": "0.0.3",
     "sequelize": "^4.37.1",
-    "serve-favicon": "^2.4.5",
-    "body-parser": "~1.18.2",
-    "debug": "~2.6.9"
+    "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "eslint": "^4.19.0",

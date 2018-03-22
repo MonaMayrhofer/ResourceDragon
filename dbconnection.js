@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const debug = require('debug')('dbconnection');
 
 
 const sequelize = new Sequelize('apitest',
@@ -10,14 +11,14 @@ const sequelize = new Sequelize('apitest',
 
 /** */
 function connect() {
-  console.log('Trying to connect to '+
+  debug('Trying to connect to '+
     process.env.PRB_DATABASE_HOST+' as '+process.env.PRB_DATABASE_USER);
   sequelize.authenticate()
   .then(() => {
-    console.log('Connection has been established!');
+    debug('Connection has been established!');
   }).catch((err) => {
-    console.log('Connection failed: '+err);
-    console.log('Trying to reconnect in 5s');
+    debug('Connection failed: '+err);
+    debug('Trying to reconnect in 5s');
     setTimeout(()=>{
       connect();
     }, 5000);
