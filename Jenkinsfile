@@ -8,10 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''
-
-pwd; id'''
-        sh 'npm install'
+        sh 'docker image ls'
       }
     }
   }
