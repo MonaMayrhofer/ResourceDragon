@@ -6,7 +6,11 @@ node {
 
     currImage.inside {
       sh 'node --version'
-      sh 'curl -f http://127.0.0.1:3000 || echo "Failed to retrieve data"'
+      ping = sh(script: 'curl -f http://127.0.0.1:3000', returnStatus: true)
+      echo "Ping went with ${ping}"
+      if(ping != 0){
+        error("Build failed! NodeJs wasn't able to start!")
+      }
     }
 
     if (env.BRANCH_NAME == 'master') {
