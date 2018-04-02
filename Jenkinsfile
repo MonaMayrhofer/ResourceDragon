@@ -1,21 +1,11 @@
-pipeline {
-  agent none
-  stages {
-    stage('Preprocess') {
-      steps {
-        echo 'Hello'
-      }
-    }
-    stage('Build') {
-      agent {
-        dockerfile {
-          filename 'Dockerfile'
-        }
-        
-      }
-      steps {
-        echo 'Agent dockerfile?'
-      }
+node {
+  stage('Build'){
+    checkout scm
+
+    def currImage = docker.build("pathfinderresourcebase:${env.BUILD_ID}")
+
+    currImage.inside {
+      sh 'node --version'
     }
   }
 }
