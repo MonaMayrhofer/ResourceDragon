@@ -1,6 +1,6 @@
 node {
   stage('Build'){
-    checkout git
+    checkout cvs
 
     def currImage = docker.build("pathfinderresourcebase:${env.BUILD_ID}")
 
