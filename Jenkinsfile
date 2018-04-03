@@ -15,7 +15,7 @@ node {
   stage('Push'){
     echo "Im on ${env.BRANCH_NAME}"
     if (env.BRANCH_NAME == 'master') {
-      echo 'On master branch... pushing'
+      echo 'On master branch... pushings'
       currImage.push('latest')
     }
   }
