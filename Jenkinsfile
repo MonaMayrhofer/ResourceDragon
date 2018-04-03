@@ -2,8 +2,7 @@ node {
   stage('Build'){
     checkout scm
 
-
-    def currImage = docker.build("pathfinderresourcebase:${env.BUILD_ID}")
+    def currImage = docker.build("obyoxar/pathfinderresourcebase:${env.BUILD_ID}")
 
     currImage.inside {
       ping = sh(script: 'node --version', returnStatus: true)
@@ -12,7 +11,9 @@ node {
         error("Build failed! NodeJs wasn't able to install!")
       }
     }
-
+  }
+  stage('Push'){
+    echo "Im on ${env.BRANCH_NAME}"
     if (env.BRANCH_NAME == 'master') {
       echo 'On master branch... pushing'
       currImage.push('latest')
